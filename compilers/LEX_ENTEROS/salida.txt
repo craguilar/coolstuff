@@ -1,0 +1,7 @@
+12 es decimal
+034 es octal
+12 es decimal
+120 es decimal
+0 es decimal
+013 es octal
+0xa es hexadecimal

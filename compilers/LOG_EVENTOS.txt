@@ -1,0 +1,12 @@
+:::::LOG DE EVENTOS::::::
+1)Analisis lexico
+
+	 No hubo errores en el analisis lexico.
+2)Analisis Sintactico
+	:Cadena de atomos generada :{${$i$i$a$0$,$,$a$1$;$;$c$c$a$2$;$;$c$c$a$3$;$;$i$i$a$4$;$;$i$i$a$5$,$,$a$6$,$,$a$7$,$,$a$8$,$,$a$9$,$,$a$10$,$,$a$11$,$,$a$12$;$;$a$0$=$=$o$o$;$;$a$2$=$=$a$0$;$;$a$2$*$*$x$x$;$;$w$w$($($a$2$e$e$a$5$)$)${${$d$d${${$a$0$*$*$x$x$;$;$}$}$w$w$($($a$2$e$e$a$5$)$)$;$;$}$}$f$f$($($a$5$=$=$x$x$;$;$a$5$<$<$x$x$;$;$a$5$+$+$a$5$)$)$a$2$*$*$x$x$;$;$b$b$($($a$0$e$e$a$2$)$)${${$b$b$($($a$1$g$g$a$0$)$)$a$1$*$*$a$0$;$;$a$2$+$+$a$0$;$;$}$}$f$f$($($a$0$=$=$x$x$;$;$a$0$<$<$a$2$;$;$a$0$+$+$x$x$)$)${${$f$f$($($a$4$=$=$x$x$;$;$a$4$e$e$x$x$;$;$a$4$-$-$x$x$)$)${${$f$f$($($a$2$=$=$x$x$;$;$a$2$<$<$a$0$;$;$a$2$*$*$x$x$)$)${${$a$1$+$+$x$x$;$;$}$}$f$f$($($a$2$=$=$x$x$;$;$a$2$<$<$a$0$;$;$a$2$/$/$x$x$)$)${${$b$b$($($a$1$e$e$x$x$)$)$a$0$=$=$a$2$;$;$}$}$}$}$}$}$}$}$
+
+	::Eventos Analisis Sintactico:
+	 No hubo errores en el analisis sintactico.CADENA ACEPTADA
+
+	::Cadena traducida:
+	{ia,a;ca;ca;ia;ia,a,a,a,a,a,a,a;a=o;a=a;a*x;w(aea){d{a*x;}w(aea);}a=x;w(a<x){a*x;a+a;}b(aea){b(aga)a*a;a+a;}a=x;w(a<a){{a=x;w(aex){{a=x;w(a<a){{a+x;}a*x;}a=x;w(a<a){{b(aex)a=a;}a/x;}}a-x;}}a+x;}}

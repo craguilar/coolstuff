@@ -1,0 +1,61 @@
+{
+int a,c;
+char b;
+char queso_forte;
+int e;
+int i,j,k,l,m,n,o,p;
+a=071;
+b=a;
+b*=5;
+@me gusta que hablemos
+while(b==i)
+{
+do{
+a*=5;
+}while(b==i);
+}
+for(i=0;i<5;i+=i)
+b*=5;
+if(a==b)
+{
+
+if(c>=a)
+c*=a;
+b+=a;
+
+}
+a=x;
+w(a<a)
+{
+	  {
+	    a=x;
+	    w(aex)
+	    {
+	      {
+		a=x;
+		w(a<a)
+		{
+		  {
+		   a+x;
+		   }a*x;
+		 }
+	      }
+	      a*x;
+	    }
+	  }
+  a*x;
+}
+
+for(a=0;a<b;a+=1)
+{
+	for(e=3;e==9;e-=1)
+	{
+		for(b=0;b<a;b*=7)
+		{
+			@Comentario
+			c+=3;
+		}
+	}
+}
+
+}

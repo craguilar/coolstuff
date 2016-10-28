@@ -1,0 +1,26 @@
+</*Elaborado por : Carlos Ruiz  Aguilar y Genaro Marmolejo Servin*/> es un comentario.
+</*DEFINICIONES UTILES*/> es un comentario.
+</*DEFINICION DE VARIABLES GLOBALES o*no es/ */> es un comentario.
+</*Tablas*/> es un comentario.
+</*Estructura 
+
+
+
+	Usada*/> es un comentario.
+</*Inicializacion de AFD*/> es un comentario.
+</*ASIGNAMOS SI ES ESTADO FINAL O NO*/> es un comentario.
+</*ASIGNACION DE CLASE*/> es un comentario.
+</* FIN DE ASIGNACION DE CLASE */> es un comentario.
+</*TABLA DE OPREL YA FUE DEFINIDA  TABLA OPERADORES LOGICOS*/> es un comentario.
+</* TABLA OP BIT*/> es un comentario.
+</* TABLA OP ASIGNACION*/> es un comentario.
+</* Fin de Inicializacion AFD*/> es un comentario.
+</*Almacenamos Dato en el Buffer Lectura del Sigu caracter*/> es un comentario.
+</* Buscamos la posicion del identificador*/> es un comentario.
+</*Si aun no existe en la tabla de simbolos*/> es un comentario.
+</*Liberar Memoria de Buffer*/> es un comentario.
+</*Fin de Liberacion de Memoria de Buffer*/> es un comentario.
+</* ABRIMOS ARCHIVOS*/> es un comentario.
+</*Inicializamos tablas*/> es un comentario.
+</*Analisis Lexico*/> es un comentario.
+</*Cerramos archivo*/> es un comentario.

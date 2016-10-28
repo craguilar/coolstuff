@@ -1,0 +1,1 @@
+cmd_/mnt/cursoc/DGTIC/cursoc/EJEMPLOS/syscalltable/bruteforce.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.2.0-4-common/scripts/module-common.lds --build-id  -o /mnt/cursoc/DGTIC/cursoc/EJEMPLOS/syscalltable/bruteforce.ko /mnt/cursoc/DGTIC/cursoc/EJEMPLOS/syscalltable/bruteforce.o /mnt/cursoc/DGTIC/cursoc/EJEMPLOS/syscalltable/bruteforce.mod.o

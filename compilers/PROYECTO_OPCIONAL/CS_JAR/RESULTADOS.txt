@@ -1,0 +1,708 @@
+::::CALCULO DE CONJUNTOS DE SELECCION:::::::::::::::::::::::::::
+::::Hecho por: Carlos Ruiz Aguilar.COMPILADORES. Noviembre2012
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+1)CARGA DE ARCHIVO
+	::::El archivo se cargo correctamente
+2)ANALISIS LEXICO Y SINTACTICO.
+	::::Analisis lexico-sintactico del archivo exitoso.
+3)CONJUNTO FIRST
+	
+0:M->{DRSG}	
+	
+  FIRST(0):[ {]
+	
+  C.S(0):[:::Lista vacia:::]
+	
+1:R->DR
+	
+  FIRST(1):[ c i]
+	
+  C.S(1):[:::Lista vacia:::]
+	
+2:R->
+	
+  FIRST(2):[:::Lista vacia:::]
+	
+  C.S(2):[:::Lista vacia:::]
+	
+3:G->SG
+	
+  FIRST(3):[ f w d a b]
+	
+  C.S(3):[:::Lista vacia:::]
+	
+4:G->
+	
+  FIRST(4):[:::Lista vacia:::]
+	
+  C.S(4):[:::Lista vacia:::]
+	
+5:D->TaL
+	
+  FIRST(5):[ c i]
+	
+  C.S(5):[:::Lista vacia:::]
+	
+6:L->;
+	
+  FIRST(6):[ ;]
+	
+  C.S(6):[:::Lista vacia:::]
+	
+7:L->,aL
+	
+  FIRST(7):[ ,]
+	
+  C.S(7):[:::Lista vacia:::]
+	
+8:T->c
+	
+  FIRST(8):[ c]
+	
+  C.S(8):[:::Lista vacia:::]
+	
+9:T->i
+	
+  FIRST(9):[ i]
+	
+  C.S(9):[:::Lista vacia:::]
+	
+10:S->F
+	
+  FIRST(10):[ f]
+	
+  C.S(10):[:::Lista vacia:::]
+	
+11:S->W
+	
+  FIRST(11):[ w]
+	
+  C.S(11):[:::Lista vacia:::]
+	
+12:S->H
+	
+  FIRST(12):[ d]
+	
+  C.S(12):[:::Lista vacia:::]
+	
+13:S->A;
+	
+  FIRST(13):[ a]
+	
+  C.S(13):[:::Lista vacia:::]
+	
+14:S->I
+	
+  FIRST(14):[ b]
+	
+  C.S(14):[:::Lista vacia:::]
+	
+15:F->f(A;E;A)P
+	
+  FIRST(15):[ f]
+	
+  C.S(15):[:::Lista vacia:::]
+	
+16:P->;
+	
+  FIRST(16):[ ;]
+	
+  C.S(16):[:::Lista vacia:::]
+	
+17:P->S
+	
+  FIRST(17):[ f w d a b]
+	
+  C.S(17):[:::Lista vacia:::]
+	
+18:P->{B}
+	
+  FIRST(18):[ {]
+	
+  C.S(18):[:::Lista vacia:::]
+	
+19:B->
+	
+  FIRST(19):[:::Lista vacia:::]
+	
+  C.S(19):[:::Lista vacia:::]
+	
+20:B->SB
+	
+  FIRST(20):[ f w d a b]
+	
+  C.S(20):[:::Lista vacia:::]
+	
+21:B->{B}B
+	
+  FIRST(21):[ {]
+	
+  C.S(21):[:::Lista vacia:::]
+	
+22:W->w(E)P
+	
+  FIRST(22):[ w]
+	
+  C.S(22):[:::Lista vacia:::]
+	
+23:I->b(E)P
+	
+  FIRST(23):[ b]
+	
+  C.S(23):[:::Lista vacia:::]
+	
+24:H->dPw(E);
+	
+  FIRST(24):[ d]
+	
+  C.S(24):[:::Lista vacia:::]
+	
+25:A->aOE
+	
+  FIRST(25):[ a]
+	
+  C.S(25):[:::Lista vacia:::]
+	
+26:O->=
+	
+  FIRST(26):[ =]
+	
+  C.S(26):[:::Lista vacia:::]
+	
+27:O->+
+	
+  FIRST(27):[ +]
+	
+  C.S(27):[:::Lista vacia:::]
+	
+28:O->-
+	
+  FIRST(28):[ -]
+	
+  C.S(28):[:::Lista vacia:::]
+	
+29:O->*
+	
+  FIRST(29):[ *]
+	
+  C.S(29):[:::Lista vacia:::]
+	
+30:O->/
+	
+  FIRST(30):[ /]
+	
+  C.S(30):[:::Lista vacia:::]
+	
+31:K->a
+	
+  FIRST(31):[ a]
+	
+  C.S(31):[:::Lista vacia:::]
+	
+32:K->o
+	
+  FIRST(32):[ o]
+	
+  C.S(32):[:::Lista vacia:::]
+	
+33:K->x
+	
+  FIRST(33):[ x]
+	
+  C.S(33):[:::Lista vacia:::]
+	
+34:K->h
+	
+  FIRST(34):[ h]
+	
+  C.S(34):[:::Lista vacia:::]
+	
+35:E->CV
+	
+  FIRST(35):[ ~ ( ! a o x h]
+	
+  C.S(35):[:::Lista vacia:::]
+	
+36:V->XCV
+	
+  FIRST(36):[ > g < l e n]
+	
+  C.S(36):[:::Lista vacia:::]
+	
+37:V->
+	
+  FIRST(37):[:::Lista vacia:::]
+	
+  C.S(37):[:::Lista vacia:::]
+	
+38:C->JQ
+	
+  FIRST(38):[ ~ ( ! a o x h]
+	
+  C.S(38):[:::Lista vacia:::]
+	
+39:Q->
+	
+  FIRST(39):[:::Lista vacia:::]
+	
+  C.S(39):[:::Lista vacia:::]
+	
+40:Q->UJQ
+	
+  FIRST(40):[ y r & | ^ s z]
+	
+  C.S(40):[:::Lista vacia:::]
+	
+41:J->~K
+	
+  FIRST(41):[ ~]
+	
+  C.S(41):[:::Lista vacia:::]
+	
+42:J->(E)
+	
+  FIRST(42):[ (]
+	
+  C.S(42):[:::Lista vacia:::]
+	
+43:J->K
+	
+  FIRST(43):[ a o x h]
+	
+  C.S(43):[:::Lista vacia:::]
+	
+44:J->!N
+	
+  FIRST(44):[ !]
+	
+  C.S(44):[:::Lista vacia:::]
+	
+45:N->(E)
+	
+  FIRST(45):[ (]
+	
+  C.S(45):[:::Lista vacia:::]
+	
+46:N->K
+	
+  FIRST(46):[ a o x h]
+	
+  C.S(46):[:::Lista vacia:::]
+	
+47:U->y
+	
+  FIRST(47):[ y]
+	
+  C.S(47):[:::Lista vacia:::]
+	
+48:U->r
+	
+  FIRST(48):[ r]
+	
+  C.S(48):[:::Lista vacia:::]
+	
+49:U->&
+	
+  FIRST(49):[ &]
+	
+  C.S(49):[:::Lista vacia:::]
+	
+50:U->|
+	
+  FIRST(50):[ |]
+	
+  C.S(50):[:::Lista vacia:::]
+	
+51:U->^
+	
+  FIRST(51):[ ^]
+	
+  C.S(51):[:::Lista vacia:::]
+	
+52:U->s
+	
+  FIRST(52):[ s]
+	
+  C.S(52):[:::Lista vacia:::]
+	
+53:U->z
+	
+  FIRST(53):[ z]
+	
+  C.S(53):[:::Lista vacia:::]
+	
+54:X->>
+	
+  FIRST(54):[ >]
+	
+  C.S(54):[:::Lista vacia:::]
+	
+55:X->g
+	
+  FIRST(55):[ g]
+	
+  C.S(55):[:::Lista vacia:::]
+	
+56:X-><
+	
+  FIRST(56):[ <]
+	
+  C.S(56):[:::Lista vacia:::]
+	
+57:X->l
+	
+  FIRST(57):[ l]
+	
+  C.S(57):[:::Lista vacia:::]
+	
+58:X->e
+	
+  FIRST(58):[ e]
+	
+  C.S(58):[:::Lista vacia:::]
+	
+59:X->n
+	
+  FIRST(59):[ n]
+	
+  C.S(59):[:::Lista vacia:::]
+	::::Calculo del conjunto FIRST exitoso
+4)CONJUNTO FOLLOW
+	
+	NT>M
+  FOLLOW:[:::Lista vacia:::]
+  FIRST:[ {]
+	
+	NT>R
+  FOLLOW:[ f w d a b]
+  FIRST:[ c i]
+	
+	NT>G
+  FOLLOW:[ }]
+  FIRST:[ f w d a b]
+	
+	NT>D
+  FOLLOW:[ c i -| f w d a b]
+  FIRST:[ c i]
+	
+	NT>L
+  FOLLOW:[ c i -| f w d a b]
+  FIRST:[ ; ,]
+	
+	NT>T
+  FOLLOW:[ a]
+  FIRST:[ c i]
+	
+	NT>S
+  FOLLOW:[ f w d a b -| } {]
+  FIRST:[ f w d a b]
+	
+	NT>F
+  FOLLOW:[ f w d a b -| } {]
+  FIRST:[ f]
+	
+	NT>P
+  FOLLOW:[ f w d a b -| } {]
+  FIRST:[ ; f w d a b {]
+	
+	NT>B
+  FOLLOW:[ }]
+  FIRST:[ f w d a b {]
+	
+	NT>W
+  FOLLOW:[ f w d a b -| } {]
+  FIRST:[ w]
+	
+	NT>I
+  FOLLOW:[ f w d a b -| } {]
+  FIRST:[ b]
+	
+	NT>H
+  FOLLOW:[ f w d a b -| } {]
+  FIRST:[ d]
+	
+	NT>A
+  FOLLOW:[ ;]
+  FIRST:[ a]
+	
+	NT>O
+  FOLLOW:[ ~ ( ! a o x h]
+  FIRST:[ = + - * /]
+	
+	NT>K
+  FOLLOW:[ y r & | ^ s z > g < l e n ; )]
+  FIRST:[ a o x h]
+	
+	NT>E
+  FOLLOW:[ ; )]
+  FIRST:[ ~ ( ! a o x h]
+	
+	NT>V
+  FOLLOW:[ ; )]
+  FIRST:[ > g < l e n]
+	
+	NT>C
+  FOLLOW:[ > g < l e n ; )]
+  FIRST:[ ~ ( ! a o x h]
+	
+	NT>Q
+  FOLLOW:[ > g < l e n ; )]
+  FIRST:[ y r & | ^ s z]
+	
+	NT>J
+  FOLLOW:[ y r & | ^ s z > g < l e n ; )]
+  FIRST:[ ~ ( a o x h !]
+	
+	NT>N
+  FOLLOW:[ y r & | ^ s z > g < l e n ; )]
+  FIRST:[ ( a o x h]
+	
+	NT>U
+  FOLLOW:[ ~ ( a o x h !]
+  FIRST:[ y r & | ^ s z]
+	
+	NT>X
+  FOLLOW:[ ~ ( ! a o x h]
+  FIRST:[ > g < l e n]
+	::::Calculo del conjunto FOLLOW exitoso
+5)CONJUNTOS DE SELECCION:
+	
+0:M->{DRSG}	
+	
+  C.S(0):[ {]
+	
+1:R->DR
+	
+  C.S(1):[ c i]
+	
+2:R->
+	
+  C.S(2):[ f w d a b]
+	
+3:G->SG
+	
+  C.S(3):[ f w d a b]
+	
+4:G->
+	
+  C.S(4):[ }]
+	
+5:D->TaL
+	
+  C.S(5):[ c i]
+	
+6:L->;
+	
+  C.S(6):[ ;]
+	
+7:L->,aL
+	
+  C.S(7):[ ,]
+	
+8:T->c
+	
+  C.S(8):[ c]
+	
+9:T->i
+	
+  C.S(9):[ i]
+	
+10:S->F
+	
+  C.S(10):[ f]
+	
+11:S->W
+	
+  C.S(11):[ w]
+	
+12:S->H
+	
+  C.S(12):[ d]
+	
+13:S->A;
+	
+  C.S(13):[ a]
+	
+14:S->I
+	
+  C.S(14):[ b]
+	
+15:F->f(A;E;A)P
+	
+  C.S(15):[ f]
+	
+16:P->;
+	
+  C.S(16):[ ;]
+	
+17:P->S
+	
+  C.S(17):[ f w d a b]
+	
+18:P->{B}
+	
+  C.S(18):[ {]
+	
+19:B->
+	
+  C.S(19):[ }]
+	
+20:B->SB
+	
+  C.S(20):[ f w d a b]
+	
+21:B->{B}B
+	
+  C.S(21):[ {]
+	
+22:W->w(E)P
+	
+  C.S(22):[ w]
+	
+23:I->b(E)P
+	
+  C.S(23):[ b]
+	
+24:H->dPw(E);
+	
+  C.S(24):[ d]
+	
+25:A->aOE
+	
+  C.S(25):[ a]
+	
+26:O->=
+	
+  C.S(26):[ =]
+	
+27:O->+
+	
+  C.S(27):[ +]
+	
+28:O->-
+	
+  C.S(28):[ -]
+	
+29:O->*
+	
+  C.S(29):[ *]
+	
+30:O->/
+	
+  C.S(30):[ /]
+	
+31:K->a
+	
+  C.S(31):[ a]
+	
+32:K->o
+	
+  C.S(32):[ o]
+	
+33:K->x
+	
+  C.S(33):[ x]
+	
+34:K->h
+	
+  C.S(34):[ h]
+	
+35:E->CV
+	
+  C.S(35):[ ~ ( ! a o x h]
+	
+36:V->XCV
+	
+  C.S(36):[ > g < l e n]
+	
+37:V->
+	
+  C.S(37):[ ; )]
+	
+38:C->JQ
+	
+  C.S(38):[ ~ ( ! a o x h]
+	
+39:Q->
+	
+  C.S(39):[ > g < l e n ; )]
+	
+40:Q->UJQ
+	
+  C.S(40):[ y r & | ^ s z]
+	
+41:J->~K
+	
+  C.S(41):[ ~]
+	
+42:J->(E)
+	
+  C.S(42):[ (]
+	
+43:J->K
+	
+  C.S(43):[ a o x h]
+	
+44:J->!N
+	
+  C.S(44):[ !]
+	
+45:N->(E)
+	
+  C.S(45):[ (]
+	
+46:N->K
+	
+  C.S(46):[ a o x h]
+	
+47:U->y
+	
+  C.S(47):[ y]
+	
+48:U->r
+	
+  C.S(48):[ r]
+	
+49:U->&
+	
+  C.S(49):[ &]
+	
+50:U->|
+	
+  C.S(50):[ |]
+	
+51:U->^
+	
+  C.S(51):[ ^]
+	
+52:U->s
+	
+  C.S(52):[ s]
+	
+53:U->z
+	
+  C.S(53):[ z]
+	
+54:X->>
+	
+  C.S(54):[ >]
+	
+55:X->g
+	
+  C.S(55):[ g]
+	
+56:X-><
+	
+  C.S(56):[ <]
+	
+57:X->l
+	
+  C.S(57):[ l]
+	
+58:X->e
+	
+  C.S(58):[ e]
+	
+59:X->n
+	
+  C.S(59):[ n]

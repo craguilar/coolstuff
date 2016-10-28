@@ -1,0 +1,70 @@
+::::CALCULO DE CONJUNTOS DE SELECCION:::::::::::::::::::::::::::
+::::Hecho por: Carlos Ruiz Aguilar.COMPILADORES. Noviembre2012
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+1)CARGA DE ARCHIVO
+	::::El archivo se cargo correctamente
+2)ANALISIS LEXICO Y SINTACTICO.
+	::::Analisis lexico-sintactico del archivo exitoso.
+3)CONJUNTO FIRST
+	
+0:S->SB
+	
+  FIRST(0):[ a b]
+	
+  C.S(0):[:::Lista vacia:::]
+	
+1:S->a
+	
+  FIRST(1):[ a]
+	
+  C.S(1):[:::Lista vacia:::]
+	
+2:S->b
+	
+  FIRST(2):[ b]
+	
+  C.S(2):[:::Lista vacia:::]
+	
+3:B->
+	
+  FIRST(3):[:::Lista vacia:::]
+	
+  C.S(3):[:::Lista vacia:::]
+	
+4:B->k
+	
+  FIRST(4):[ k]
+	
+  C.S(4):[:::Lista vacia:::]
+	::::Calculo del conjunto FIRST exitoso
+4)CONJUNTO FOLLOW
+	
+	NT>S
+  FOLLOW:[ k -|]
+  FIRST:[ a b]
+	
+	NT>B
+  FOLLOW:[ -| k]
+  FIRST:[ k]
+	::::Calculo del conjunto FOLLOW exitoso
+5)CONJUNTOS DE SELECCION:
+	
+0:S->SB
+	
+  C.S(0):[ a b]
+	
+1:S->a
+	
+  C.S(1):[ a]
+	
+2:S->b
+	
+  C.S(2):[ b]
+	
+3:B->
+	
+  C.S(3):[ -| k]
+	
+4:B->k
+	
+  C.S(4):[ k]

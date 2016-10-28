@@ -1,0 +1,24 @@
+{
+	int a,b,aux,i,c;
+	a=071;
+	b=a;
+	b*=5;
+	@me gusta que hablemos
+	while(b==i)
+	{
+	do{
+		a*=5;
+	}while(b==i);@esto generara un loop
+	}
+	for(i=0;i<b;i+=i)
+		b*=5;
+	if(a==b)
+	{
+	  @Decimos que a es mayor que b entonces
+	  if(c>=a) 
+		c*=a;
+		b+=a;
+	@	u=k+e;
+	}	
+	@eres eres un loco sin remedio  {i$i$a$0$,a$1$,a$2$,a$3$;a$0$=o;a$1$=a$0$;a$1$*x;w(a$1$ea$3$){d{a$0$*x;w(a$1$ea$3$);}f(a$3$=x;a$3$<x;a$3$+a$3$)a$1$*x;b(a$0$ea$1$){a$1$+a$0$;}}
+}

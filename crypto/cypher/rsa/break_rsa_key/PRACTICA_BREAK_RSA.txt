@@ -1,0 +1,119 @@
+================================================
+How to break RSA explicitly with OpenSSL keys
+===============================================
+
+Everybody talks about how vulnerable is RSA and the importance of prime numbers envolved in the creation of keys, people knows that the security is based on the complexity of factorization, 
+some days before I posted how to break a key and people asked me to make a post of it.
+
+We are going to break a RSA key of 256 bits, this size is not too big but is not insignificant in less than 5 minutes, this is another reason to do research in other schemes like discrete logarithm over other algebraic platforms, I have been doing speeches about jacobians of algebraic curves and other abelian varieties.
+
+I will introduce RSA for those who don't know how it works and then we are going to break it :)
+
+
+Key generation:
+
+- two random primes are generated (p,q) 
+- compute n=pq this number will be the modulus
+- compute phi(n)=(p-1)(q-1) (phi(n) is the function that counts the relative primes to n, and is (p-1)(q-1) because p and q are primes)
+- Chose e such that 1 less than e less than phi(n) and gcd(phi(n),e) = 1 (OpenSSL generally assigns something near to 2^16 like 65537)
+- Compute d = e^-1 mod phi(n)
+
+(d,p,q) is the private key
+(e,n) is the public key
+
+
+Encryption:
+
+
+- A is going to receive M so A sends to B (e,n)
+- B computes c=M^e mod n and sends to A
+
+
+Decryption:
+
+
+- A computes M=c^d mod n and is the same as M=(M^e)^d mod n is the same as M (it's easy to prove that the last equation is M)
+
+
+
+
+The security is that, if someone gets the public key (e,n) we have that d = e^-1 mod phi(n) and is the same as d = e^-1 mod (p-1)(q-1)
+
+
+This person need to factorize n=pq to get e^-1 mod (p-1)(q-1) because this person must know (p-1)(q-1) to compute the inverse of e
+
+
+How to break RSA given a public key generated with OpenSSL
+
+
+First we need a test environment
+
+
+We generate the private key (this is p,q) and we save it to privada.pem
+openssl genrsa -out privada.pem 256 
+
+We generate the public key with the previous private.pem (this is e,n) and we save it to pub.pem
+openssl rsa -in privada.pem -pubout -out pub.pem
+
+We extract the modulus n and the exponent n from the public key
+openssl rsa -in pub.pem -pubin -text -modulus
+
+This will give us a lot of info, and in the info you will find
+
+Exponent: 65537 (0x10001)
+Modulus=9ABAAD5BBE954A26BDBB15568B7AEB3651D0605EA5687329F849DB1F9871865F
+
+Exponent is "e" and Modulus is "n"
+
+We convert to decimal the modulus
+echo "ibase=16; 9ABAAD5BBE954A26BDBB15568B7AEB3651D0605EA5687329F849DB1F9871865F"|bc
+
+69986008711415694391421268580269058232048146719704518153244714221529713444447
+
+
+
+Then we factorize with msieve that is available here, this msieve works using the number field sieve, this algorithm is the fastest to factorize (turing algorithm) you will have to compile it and it requieres GMP and other standard stuff
+
+To factorize that modulus n, you just need to run it with msieve as follows
+
+msieve -v 69986008711415694391421268580269058232048146719704518153244714221529713444447
+
+It will take 2 minutes in a home computer (this is because we are working with 256 bits, but in my university theres a cluster called Kanbalam, it can break 768 bits in weeks)
+
+When it finishes it will show you the factors
+
+
+prp39 factor: 258903250452187592132630852021175987089
+prp39 factor: 270317226953240634960995990331891792623
+
+Now, the last step is to build the private key with the (e,p,q) , and I made a libcrypto code that generates a PEM private , and is available for you as a CGI from my website, you just need to put the p,q and e in the GET (URL) and it will show you the private key (note that previously we showed that e=65537)
+
+http://math.co.ro/cgi-bin/genpriv?p=258903250452187592132630852021175987089&q=270317226953240634960995990331891792623&e=65537
+
+the output of the website will be the following:
+
+Llave privada de 258903250452187592132630852021175987089,270317226953240634960995990331891792623 y 65537 por Eduardo Ruiz Duarte (beck) toorandom@gmail.com
+
+-----BEGIN RSA PRIVATE KEY-----
+MIGqAgEAAiEAmrqtW76VSia9uxVWi3rrNlHQYF6laHMp+EnbH5hxhl8CAwEAAQIh
+AIb+e6Vhn6p0JnCE618BvRfp5+WyQWSxb7Fz8aTB5FTBAhEAy100RZ5hZCzjbv48
+M2I67wIRAMLG88hDEnjIwaItDgCYK5ECEE4kDBfMGaQCU4msirk7v2UCEFDOY1MA
+
+6Iftmc+ja3y5pNECEF2g5ukd6W4XRpU1d9AwY/4=
+-----END RSA PRIVATE KEY-----
+
+
+
+If you compare the initial key (privada.pem) with this new key that I will save in "brokenkey.pem"
+you will see that they are the same and we did not use any information of the private key generated at the begining to get this brokenkey.pem
+
+md5sum privada.pem llaverota.pem
+9cd4b5a39be5717978b9035ddc5fc887 privada.pem
+9cd4b5a39be5717978b9035ddc5fc887 brokenkey.pem
+
+
+Comments:
+Eduardo Ruiz Duarte
+toorandom at gmail d0t com
+Twitter: @toorandom
+http://b3ck.blogspot.mx/2011/06/how-to-break-rsa-explicitly-with.html

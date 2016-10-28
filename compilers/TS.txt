@@ -1,0 +1,14 @@
+ID             Tipo
+a  integer
+c  integer
+b  char
+queso_forte  char
+e  integer
+i  integer
+j  integer
+k  integer
+l  integer
+m  integer
+n  integer
+o  integer
+p  integer
